@@ -7,14 +7,6 @@
 //
 import UIKit
 
-public extension Array {
-    
-    func contains<T>(obj: T) -> Bool where T: Equatable {
-        return self.filter({ $0 as? T == obj }).count > 0
-    }
-    
-}
-
 public protocol ListProviderDelegate: class {
     
     func didStartFetching(_ data: [TableViewData]?)
